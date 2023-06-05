@@ -1,2 +1,8 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins";
+
+header {
+  background-color: var.$dark-blue;
+  .navbar__container {
+  }
+}
