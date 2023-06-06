@@ -101,13 +101,290 @@ video {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 body {
   font-family: "Poppins", sans-serif;
 }
 
+#backtop {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  bottom: -60px;
+  transition: 0.5s;
+  right: 60px;
+  border-radius: 50%;
+}
+@media (max-width: 550px) {
+  #backtop {
+    right: 40px;
+  }
+  #backtop img {
+    width: 50px;
+  }
+}
+
 header {
   background-color: #232536;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: 0.5s;
+}
+header .navbar__container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar__container #navbar-open {
+  display: none;
+}
+header .navbar__container .nav__left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header .navbar__container .nav__left a {
+  padding: 0;
+  margin-top: 5px;
+}
+header .navbar__container .nav__right {
+  height: 100%;
+}
+header .navbar__container .nav__right .menus {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  list-style: none;
+}
+header .navbar__container .nav__right .menus__item,
+header .navbar__container .nav__right .menus .clone {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 3px solid #232536;
+  transition: 0.3s;
+}
+header .navbar__container .nav__right .menus__item:hover,
+header .navbar__container .nav__right .menus .clone:hover {
+  border-top: 3px solid #ffa155;
+}
+header .navbar__container .nav__right .menus__item .menus__link,
+header .navbar__container .nav__right .menus__item a,
+header .navbar__container .nav__right .menus .clone .menus__link,
+header .navbar__container .nav__right .menus .clone a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+header .navbar__container .nav__right .menus__item a,
+header .navbar__container .nav__right .menus .clone a {
+  display: flex;
+  align-items: center;
+}
+header .navbar__container .nav__right .menus__item a img,
+header .navbar__container .nav__right .menus .clone a img {
+  margin-left: 8px;
+  transition: 0.3s;
+}
+header .navbar__container .nav__right .menus__item:hover,
+header .navbar__container .nav__right .menus .clone:hover {
+  cursor: pointer;
+}
+header .navbar__container .nav__right .menus__item:hover .menus__link,
+header .navbar__container .nav__right .menus__item:hover a,
+header .navbar__container .nav__right .menus .clone:hover .menus__link,
+header .navbar__container .nav__right .menus .clone:hover a {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+header .navbar__container .nav__right .menus__item:hover .menus__link img,
+header .navbar__container .nav__right .menus__item:hover a img,
+header .navbar__container .nav__right .menus .clone:hover .menus__link img,
+header .navbar__container .nav__right .menus .clone:hover a img {
+  transform: translateX(8px);
+}
+header .navbar__container .nav__right .menus .search {
+  display: none;
+}
+header .navbar__container .nav__right .menus #navbar-close {
+  display: none;
+}
+header .navbar__container .nav__right .clone__mobile {
+  display: none;
+}
+@media (max-width: 950px) {
+  header .navbar__container #navbar-open {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+  header .navbar__container .nav__right {
+    display: flex;
+    align-items: center;
+  }
+  header .navbar__container .nav__right .menus {
+    transition: 0.7s ease-out;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #232536;
+    height: 45%;
+    width: 100vw;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -45%;
+  }
+  header .navbar__container .nav__right .menus__item {
+    border: none;
+    height: 7%;
+  }
+  header .navbar__container .nav__right .menus__item .menus__link {
+    position: relative;
+    height: 100%;
+    font-size: 18px;
+  }
+  header .navbar__container .nav__right .menus__item .menus__link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #444cfc;
+    bottom: -4px;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  header .navbar__container .nav__right .menus__item .menus__link:hover::before {
+    transform-origin: center;
+    transform: scaleX(1);
+  }
+  header .navbar__container .nav__right .menus__item:hover {
+    border: none;
+  }
+  header .navbar__container .nav__right .menus .clone {
+    display: none;
+  }
+  header .navbar__container .nav__right .menus .search {
+    width: 100%;
+    display: flex;
+  }
+  header .navbar__container .nav__right .menus .search input {
+    width: 90%;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: black;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  header .navbar__container .nav__right .menus .search input::-moz-placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  header .navbar__container .nav__right .menus .search input::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  header .navbar__container .nav__right .menus .search button {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding: 8px 20px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border: none;
+    cursor: pointer;
+    background-color: #444cfc;
+  }
+  header .navbar__container .nav__right .menus #navbar-close {
+    cursor: pointer;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    position: fixed;
+    right: 20px;
+  }
+  header .navbar__container .nav__right .clone__mobile {
+    display: block;
+    padding: 5px 10px;
+    background-color: #444cfc;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    gap: 5px;
+  }
+  header .navbar__container .nav__right .clone__mobile img {
+    width: 17px;
+    transition: 0.3s;
+  }
+  header .navbar__container .nav__right .clone__mobile:hover {
+    background-color: #303aff;
+  }
+  header .navbar__container .nav__right .clone__mobile:hover img {
+    transform: translateX(5px);
+  }
+}
+@media (max-width: 550px) {
+  header .navbar__container #navbar-open img {
+    width: 35px;
+  }
+  header .navbar__container .nav__left a img {
+    width: 110px;
+  }
+  header .navbar__container .nav__right .clone__mobile {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px 8px;
+  }
+}
+@media (max-width: 550px) {
+  header {
+    height: 70px;
+  }
+}
+
+.navbar-shrink {
+  height: 65px !important;
+}
+
+footer #footer__subscribe {
+  padding: 96px 0;
 }

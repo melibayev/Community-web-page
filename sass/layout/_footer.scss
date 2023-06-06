@@ -1,2 +1,7 @@
 @use "../abstracts/variables" as var;
-@use "../abstracts/mixins";
+
+footer {
+  #footer__subscribe {
+    padding: 96px 0;
+  }
+}

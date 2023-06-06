@@ -1,8 +1,246 @@
 @use "../abstracts/variables" as var;
-@use "../abstracts/mixins";
 
 header {
   background-color: var.$dark-blue;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: 0.5s;
   .navbar__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #navbar-open {
+      display: none;
+    }
+    .nav__left {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      a {
+        padding: 0;
+        margin-top: 5px;
+      }
+    }
+    .nav__right {
+      height: 100%;
+      .menus {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 33px;
+        list-style: none;
+        &__item,
+        .clone {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          border-top: 3px solid var.$dark-blue;
+          transition: 0.3s;
+          &:hover {
+            border-top: 3px solid var.$orange;
+          }
+          .menus__link,
+          a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+            opacity: 0.6;
+            transition: 0.3s;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            img {
+              margin-left: 8px;
+              transition: 0.3s;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+            .menus__link,
+            a {
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+              img {
+                transform: translateX(8px);
+              }
+            }
+          }
+        }
+        .search {
+          display: none;
+        }
+        #navbar-close {
+          display: none;
+        }
+      }
+      .clone__mobile {
+        display: none;
+      }
+    }
+    @media (max-width: 950px) {
+      #navbar-open {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+      }
+      .nav__right {
+        display: flex;
+        align-items: center;
+        .menus {
+          transition: 0.7s ease-out;
+          align-items: start;
+          justify-content: space-between;
+          flex-direction: column;
+          gap: 10px;
+          background-color: var.$dark-blue;
+          height: 45%;
+          width: 100vw;
+          padding: 20px;
+          position: fixed;
+          left: 0;
+          right: 0;
+          top: -45%;
+          &__item {
+            border: none;
+            height: 7%;
+            .menus__link {
+              position: relative;
+              height: 100%;
+              font-size: 18px;
+            }
+            .menus__link::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              border-radius: 4px;
+              background-color: var.$light-blue;
+              bottom: -4px;
+              transform-origin: center;
+              transform: scaleX(0);
+              transition: transform 0.3s ease-in-out;
+            }
+            .menus__link:hover::before {
+              transform-origin: center;
+              transform: scaleX(1);
+            }
+            &:hover {
+              border: none;
+            }
+          }
+          .clone {
+            display: none;
+          }
+          .search {
+            width: 100%;
+            display: flex;
+            input {
+              width: 90%;
+              padding: 8px 10px;
+              outline: none;
+              border: none;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              color: black;
+              border-top-left-radius: 7px;
+              border-bottom-left-radius: 7px;
+              &::placeholder {
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+              }
+            }
+            button {
+              font-family: "Poppins", sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              color: white;
+              padding: 8px 20px;
+              border-top-right-radius: 7px;
+              border-bottom-right-radius: 7px;
+              border: none;
+              cursor: pointer;
+              background-color: var.$light-blue;
+            }
+          }
+          #navbar-close {
+            cursor: pointer;
+            display: block;
+            padding: 0;
+            margin: 0;
+            border: none;
+            background-color: transparent;
+            position: fixed;
+            right: 20px;
+          }
+        }
+        .clone__mobile {
+          display: block;
+          padding: 5px 10px;
+          background-color: var.$light-blue;
+          border-radius: 8px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+          letter-spacing: 0.5px;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          transition: 0.3s;
+          gap: 5px;
+          img {
+            width: 17px;
+            transition: 0.3s;
+          }
+          &:hover {
+            background-color: #303aff;
+            img {
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 550px) {
+      #navbar-open {
+        img {
+          width: 35px;
+        }
+      }
+      .nav__left {
+        a {
+          img {
+            width: 110px;
+          }
+        }
+      }
+      .nav__right {
+        .clone__mobile {
+          font-size: 12px;
+          line-height: 20px;
+          padding: 5px 8px;
+        }
+      }
+    }
   }
+  @media (max-width: 550px) {
+    height: 70px;
+  }
+}
+.navbar-shrink {
+  height: 65px !important;
 }

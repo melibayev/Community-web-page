@@ -93,9 +93,27 @@ video {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto !important;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+#backtop {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  bottom: -60px;
+  transition: 0.5s;
+  right: 60px;
+  border-radius: 50%;
+  @media (max-width:550px) {
+    right: 40px;
+    img {
+      width: 50px;
+    }
+  }
 }

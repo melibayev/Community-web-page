@@ -4,46 +4,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Community|Home</title>
+    <title>Community || Home</title>
     <link rel="stylesheet" href="css/home.min.css" />
   </head>
   <body>
-    <header>
+    <button id="backtop">
+      <a href="#">
+        <img width="60px" src="assets/icons/backtop.png" alt="backtop" />
+      </a>
+    </button>
+    
+    <header id="navbar">
       <div class="container navbar__container">
+        <button id="navbar-open">
+          <img
+            width="40px"
+            src="assets/icons/navbar-open.svg"
+            alt="navbar-open"
+          />
+        </button>
         <div class="nav__left">
           <a href="index.html">
             <img src="assets/icons/navbar-logo.svg" alt="brand logo" />
           </a>
         </div>
         <div class="nav__right">
-          <ul class="menus">
+          <ul class="menus" id="navbar-responsive">
             <li class="menus__item">
-              <a href="#" class="menus__link">Home</a>
+              <a href="index.html" class="menus__link">Home</a>
             </li>
             <li class="menus__item">
-              <a href="#" class="menus__link">Service</a>
+              <a href="service.html" class="menus__link">Service</a>
             </li>
             <li class="menus__item">
-              <a href="#" class="menus__link">Company</a>
+              <a href="company.html" class="menus__link">Company</a>
             </li>
             <li class="menus__item">
-              <a href="#" class="menus__link">Career</a>
+              <a href="career.html" class="menus__link">Career</a>
             </li>
             <li class="menus__item">
-              <a href="#" class="menus__link">Blog</a>
+              <a href="blog.html" class="menus__link">Blog</a>
             </li>
             <li class="menus__item">
-              <a href="#" class="menus__link">Contact us</a>
+              <a href="contact.html" class="menus__link">Contact us</a>
             </li>
             <li class="clone">
-              <a href="#"
+              <a href="https://github.com/melibayev/Community-web-page.git"
                 >Clone project
                 <img src="assets/icons/navbar-arrow-right.svg" alt=""
               /></a>
             </li>
+            <div class="search">
+              <input type="search" placeholder="What do you need ?" />
+              <button type="submit">Search</button>
+            </div>
+            <button id="navbar-close">
+              <img
+                width="40px"
+                src="assets/icons/navbar-close.svg"
+                alt="navbar-open"
+              />
+            </button>
           </ul>
+          <a
+            class="clone__mobile"
+            href="https://github.com/melibayev/Community-web-page.git"
+            >Clone project
+          </a>
         </div>
       </div>
     </header>
+
+    <!-- <footer>
+      <section id="footer__subscribe">
+        <div class="container subscribe__container">
+          <div class="subscribe">
+            
+          </div>
+        </div>
+      </section>
+    </footer> -->
+    <script src="js/main.js"></script>
   </body>
 </html>
