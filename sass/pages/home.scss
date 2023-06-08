@@ -1,4 +1,72 @@
 @use "../global.scss";
 @use "../abstracts/variables" as var;
 
-
+#home {
+  padding: 176px 0 96px;
+  background-color: var.$dark-blue;
+  .home__container {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      .left {
+        .shape {
+          width: 24px;
+          height: 24px;
+          background-color: rgba(255, 255, 255, 0.06);
+          transition: 0.3s;
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.128);
+          }
+        }
+        h1 {
+          font-weight: 600;
+          font-size: 56px;
+          line-height: 68px;
+          color: #ffffff;
+          max-width: 600px;
+          margin: 24px 0;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+          opacity: 0.6;
+          max-width: 520px;
+          margin-bottom: 52px;
+        }
+      }
+      .right {
+        position: relative;
+        .line__small {
+          position: absolute;
+          top: 0;
+          height: 16px;
+          width: 100px;
+          transform: rotate(90deg);
+          display: flex;
+          .line1 {
+            height: 100%;
+            width: 25%;
+            background-color: var.$orange;
+          }
+          .line2 {
+            height: 100%;
+            width: 50%;
+            background-color: var.$molochniy-1;
+          }
+          .line3 {
+            height: 100%;
+            width: 25%;
+            background-color: var.$light-blue;
+          }
+        }
+      }
+    }
+  }
+}

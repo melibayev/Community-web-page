@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Community || Home</title>
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/home.min.css" />
   </head>
   <body>
@@ -15,7 +16,6 @@
       </a>
     </button>
     <!-- BACKTOP END -->
-
     <!-- HEADER START  -->
     <header id="navbar">
       <div class="container navbar__container">
@@ -77,8 +77,49 @@
         </div>
       </div>
     </header>
-    <!-- HEADER START  -->
-
+    <!-- HEADER END  -->
+    <!-- HOME SECTION START  -->
+    <section id="home">
+      <div class="container home__container">
+        <div class="home__container__top">
+          <div class="left">
+            <div class="shape"></div>
+            <h1>Transform Your Idea Into Reality with Finsweet</h1>
+            <p>
+              The entire Finsweet team knows what's good with Webflow and you
+              can too with 1 week and a good attitude.
+            </p>
+            <a href="#" class="main__btn">
+              Request Quote
+              <img src="assets/icons/navbar-arrow-right.svg" alt="" />
+              <div class="rec1"></div>
+              <div class="rec2"></div>
+              <div class="rec3"></div>
+              <div class="rec4"></div>
+            </a>
+          </div>
+          <div class="right">
+            <div class="line__small">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <div class="line__big">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <video controls data-setup="{}" id="my-video" class="video-js">
+              <source
+                src="assets/videos/Najot Ta’lim (online-video-cutter.com).mp4"
+              />
+            </video>
+          </div>
+        </div>
+        <div class="home__container__bottom"></div>
+      </div>
+    </section>
+    <!-- HOME SECTION END  -->
     <!-- FOOTER START  -->
     <footer>
       <div class="container">
@@ -201,6 +242,7 @@
       </div>
     </footer>
     <!-- FOOTER END  -->
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
