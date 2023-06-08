@@ -466,7 +466,7 @@ header .navbar__container .nav__right .clone__mobile {
 }
 
 footer #footer__subscribe {
-  margin: 96px 0;
+  margin-bottom: 96px;
   padding: 96px;
   background-color: #666dff;
   display: flex;
