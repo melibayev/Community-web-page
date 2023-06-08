@@ -142,6 +142,7 @@ header .navbar__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 header .navbar__container #navbar-open {
   display: none;
