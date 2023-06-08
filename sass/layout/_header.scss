@@ -1,6 +1,7 @@
 @use "../abstracts/variables" as var;
 
 header {
+  z-index: 100;
   background-color: var.$dark-blue;
   height: 80px;
   width: 100%;
