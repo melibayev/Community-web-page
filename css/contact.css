@@ -101,7 +101,7 @@ video {
 }
 
 html {
-  scroll-behavior: auto !important;
+  scroll-behavior: smooth;
 }
 
 body {
