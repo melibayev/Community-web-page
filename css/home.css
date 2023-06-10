@@ -101,7 +101,7 @@ video {
 }
 
 html {
-  scroll-behavior: auto !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -207,12 +207,14 @@ header {
   position: fixed;
   top: 0;
   transition: 0.5s;
+  z-index: 1000;
 }
 header .navbar__container {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 header .navbar__container #navbar-open {
   display: none;
@@ -379,6 +381,12 @@ header .navbar__container .nav__right .clone__mobile {
     font-size: 16px;
     line-height: 24px;
   }
+  header .navbar__container .nav__right .menus .search input:-ms-input-placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
   header .navbar__container .nav__right .menus .search input::placeholder {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -458,7 +466,7 @@ header .navbar__container .nav__right .clone__mobile {
 }
 
 footer #footer__subscribe {
-  margin: 96px 0;
+  margin-bottom: 96px;
   padding: 96px;
   background-color: #666dff;
   display: flex;
@@ -559,6 +567,14 @@ footer #footer__subscribe .input input::-moz-placeholder {
   color: #232536;
   opacity: 0.4;
 }
+footer #footer__subscribe .input input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #232536;
+  opacity: 0.4;
+}
 footer #footer__subscribe .input input::placeholder {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -640,6 +656,9 @@ footer #footer__subscribe .input input:focus {
   footer #footer__subscribe .input input::-moz-placeholder {
     font-size: 15px;
   }
+  footer #footer__subscribe .input input:-ms-input-placeholder {
+    font-size: 15px;
+  }
   footer #footer__subscribe .input input::placeholder {
     font-size: 15px;
   }
@@ -664,6 +683,9 @@ footer #footer__subscribe .input input:focus {
     padding: 7px;
   }
   footer #footer__subscribe .input input::-moz-placeholder {
+    font-size: 14px;
+  }
+  footer #footer__subscribe .input input:-ms-input-placeholder {
     font-size: 14px;
   }
   footer #footer__subscribe .input input::placeholder {
@@ -925,7 +947,7 @@ footer #footer__main .main__container__top .right .contact a:hover img {
     gap: 30px;
   }
   footer #footer__main .main__container__top .right .menus ul h4,
-  footer #footer__main .main__container__top .right .menus ul .pages {
+footer #footer__main .main__container__top .right .menus ul .pages {
     font-size: 18px;
   }
   footer #footer__main .main__container__top .right .menus ul a {
