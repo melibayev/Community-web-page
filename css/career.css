@@ -1005,3 +1005,353 @@ footer .footer__bottom .footer_bottom .right a:hover {
     gap: 20px;
   }
 }
+
+#career__header {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.corner {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.corner-img {
+  max-width: 48px;
+  max-height: 52px;
+}
+
+.careerheader__wrapper-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.careerheader-span {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #232536;
+  opacity: 0.87;
+}
+
+.careerheader__text-heading1 {
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  color: #232536;
+  max-width: 624px;
+  max-height: 174px;
+}
+
+.careerheader__text-title {
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #232536;
+  opacity: 0.87;
+  max-width: 550px;
+  max-height: 48px;
+}
+
+.careerheader__heading {
+  margin-top: 64px;
+  max-width: 1099px;
+  max-height: 194px;
+}
+
+.careerheader__lower {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.lower_img {
+  max-width: 24px;
+  max-height: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lower_img:hover {
+  transition: 0.5s;
+  transform: translateY(5px);
+}
+
+@media (max-width: 1100px) {
+  .careerheader__heading {
+    position: relative;
+    min-width: 1099px;
+    min-height: 194px;
+  }
+  .careerheader__heading img {
+    position: absolute;
+    left: 50px;
+    padding-left: 50px;
+    max-width: 1000px;
+  }
+  .corner {
+    transform: translateX(-70px);
+  }
+}
+@media (max-width: 1000px) {
+  .careerheader__heading img {
+    left: 110px;
+    padding-left: 0;
+    max-width: 950px;
+  }
+  .careerheader__wrapper-text {
+    padding-left: 100px;
+  }
+  .careerheader__lower {
+    padding-left: 100px;
+  }
+}
+@media (max-width: 950px) {
+  .careerheader__heading img {
+    max-width: 800px;
+    left: 180px;
+  }
+  .corner {
+    transform: translateX(-150px);
+  }
+}
+@media (max-width: 850px) {
+  .careerheader__heading img {
+    max-width: 700px;
+    left: 250px;
+  }
+  .corner {
+    transform: translateX(-150px);
+  }
+}
+@media (max-width: 750px) {
+  .careerheader__heading img {
+    max-width: 600px;
+    left: 350px;
+  }
+  .corner {
+    transform: translateX(-150px);
+  }
+  .careerheader__wrapper-text {
+    padding-left: 200px;
+  }
+  .careerheader__lower {
+    padding-left: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .careerheader__heading img {
+    max-width: 600px;
+    left: 400px;
+  }
+  .corner {
+    transform: translateX(-80px);
+  }
+  .careerheader__wrapper-text {
+    padding-left: 300px;
+  }
+  .careerheader__lower {
+    padding-left: 300px;
+  }
+}
+@media (max-width: 400px) {
+  .careerheader__heading img {
+    max-width: 600px;
+    left: 450px;
+  }
+  .corner {
+    transform: translateX(-80px);
+  }
+  .careerheader__wrapper-text {
+    padding-left: 350px;
+  }
+  .careerheader__lower {
+    padding-left: 350px;
+  }
+}
+.career__cards-wrapper {
+  margin-top: 96px;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 1280px;
+  min-height: 949px;
+  background-color: #ecf8f9;
+  padding: 78px;
+  gap: 32px;
+  margin-bottom: 96px;
+}
+
+.cards__item-heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: #232536;
+}
+
+.cards__item-title {
+  padding-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5d5f6d;
+  opacity: 0.6;
+  padding-bottom: 52px;
+}
+
+.cards__item-span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666dff;
+  cursor: pointer;
+}
+
+.cards__wrapper-item1 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+.cards__wrapper-item2 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+.cards__wrapper-item3 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+.cards__wrapper-item4 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+.cards__wrapper-item5 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+.cards__wrapper-item6 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+.cards__wrapper-item7 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+.cards__wrapper-item8 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+.cards__wrapper-item9 {
+  padding: 48px 130px 20px 48px;
+  background-color: #FFFFFF;
+  max-width: 354px;
+  max-height: 243px;
+}
+
+@media (max-width: 1100px) {
+  .career__cards-wrapper {
+    max-width: 1150px;
+    max-width: 900px;
+    min-width: 1150px;
+    min-height: 900px;
+    padding-left: 170px;
+  }
+}
+@media (max-width: 1000px) {
+  .career__cards-wrapper {
+    overflow: hidden;
+    min-width: 1000px;
+  }
+}
+@media (max-width: 950px) {
+  .career__cards-wrapper {
+    overflow: hidden;
+    min-width: 900px;
+    padding: 50px;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 850px) {
+  .career__cards-wrapper {
+    overflow: hidden;
+    min-width: 850px;
+    padding: 50px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 750px) {
+  .career__cards-wrapper {
+    overflow: hidden;
+    min-width: 800px;
+    padding: 30px;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 650px) {
+  .career__cards-wrapper {
+    overflow: hidden;
+    min-width: 770px;
+    padding: 15px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .career__cards-wrapper {
+    overflow: hidden;
+    min-width: 700px;
+    padding: 50px;
+    padding-left: 170px;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 550px) {
+  .career__cards-wrapper {
+    overflow: hidden;
+    min-width: 600px;
+    padding: 50px;
+    padding-left: 120px;
+    margin-left: 50px;
+  }
+}
