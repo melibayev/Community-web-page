@@ -128,6 +128,11 @@ body {
   }
 }
 
+h1, h2, h3, h4, h5, h6,
+a, p, span, i {
+  color: #232536;
+}
+
 .main__btn {
   max-width: 220px;
   padding: 20px 32px;
@@ -1395,9 +1400,11 @@ footer .footer__bottom .footer_bottom .right a:hover {
 #about .about__container .pictures .carousel {
   width: 100%;
   padding: 10px;
+  cursor: -webkit-grab;
   cursor: grab;
 }
 #about .about__container .pictures .carousel.dragging {
+  cursor: -webkit-grabbing;
   cursor: grabbing;
 }
 #about .about__container .pictures .carousel--wrap {
@@ -1409,6 +1416,7 @@ footer .footer__bottom .footer_bottom .right a:hover {
   padding: 10px;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 #about .about__container .pictures .carousel--item figure {
@@ -1743,15 +1751,15 @@ footer .footer__bottom .footer_bottom .right a:hover {
     grid-template-columns: 1fr;
   }
   #expertise .expertise__container .right .card,
-  #expertise .expertise__container .right .card-mobile {
+#expertise .expertise__container .right .card-mobile {
     padding: 30px;
   }
   #expertise .expertise__container .right .card .content p,
-  #expertise .expertise__container .right .card-mobile .content p {
+#expertise .expertise__container .right .card-mobile .content p {
     max-width: 100%;
   }
   #expertise .expertise__container .right .card:hover,
-  #expertise .expertise__container .right .card-mobile:hover {
+#expertise .expertise__container .right .card-mobile:hover {
     transform: scale(1.03);
   }
 }
@@ -1763,11 +1771,11 @@ footer .footer__bottom .footer_bottom .right a:hover {
     font-size: 14px;
   }
   #expertise .expertise__container .right .card,
-  #expertise .expertise__container .right .card-mobile {
+#expertise .expertise__container .right .card-mobile {
     padding: 25px 20px;
   }
   #expertise .expertise__container .right .card .content p,
-  #expertise .expertise__container .right .card-mobile .content p {
+#expertise .expertise__container .right .card-mobile .content p {
     font-size: 14px;
   }
 }

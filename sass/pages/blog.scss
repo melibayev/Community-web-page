@@ -1,2 +1,377 @@
 @use "../global.scss";
 @use "../abstracts/variables" as var;
+
+#home {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.home {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    &__left {
+        span {
+            margin-bottom: 24px;
+            display: inline-block;
+            font-style: normal;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        h2 {
+            margin-bottom: 24px;
+            max-width: 624px;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 58px;
+        }
+        & > p {
+            margin-bottom: 24px;
+            max-width: 624px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        a {
+            text-decoration: none;
+            color: var.$light-blue;
+            i {
+                margin-left: 6px;
+                transition: 0.5s;
+            }
+            &:hover {
+                i {
+                    transform: translateX(8px);
+                }
+            }
+        }
+        &__person {
+            margin-top: 44px;
+            margin-bottom: 53px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            &__left {
+                padding-right: 16px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                border-right: 2px solid grey;
+            }
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 48px;
+        background-color: var.$molochniy-3;
+        padding: 72px;
+        &__card {
+            h4 {
+                margin-bottom: 16px;
+                max-width: 366px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+            }
+            .info {
+                display: flex;
+                gap: 16px;
+                &__person {
+                    p {
+                        font-size: 16px;
+                        margin-bottom: -6px;
+                    }
+                    span {
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#post {
+    padding-top: 50px;
+    padding-bottom: 96px;
+}
+
+.post__title, 
+.about__title {
+    h2 {
+        margin-bottom: 64px;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 58px;
+    }
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    &__card {
+        display: flex;
+        gap: 12px;
+        &__img { 
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__description {
+            padding: 32px;
+            background-color: var.$f9f9;
+            h4 {
+                margin-bottom: 24px;
+                max-width: 264px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+            }
+            .post__person {
+                display: flex;
+                gap: 16px;
+                &__info {
+                    p {
+                        font-size: 16px;
+                        margin-bottom: -6px;
+                    }
+                    span {
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#about {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-color: var.$f9f9;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    &__card {
+        overflow: hidden;
+        cursor: pointer;
+        &:hover &__img img{
+            transform: scale(1.05);
+        }
+        &__img {
+            img {
+                width: 100%;
+                height: 100%;
+                transition: 0.5s;
+            }
+        }
+        &__description {
+            padding: 32px;
+            background-color: var.$whiteff;
+            h4 {
+                margin-bottom: 16px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 36px;
+            }
+            & > p {
+                margin-bottom: 24px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+            .post__person {
+                display: flex;
+                gap: 16px;
+                &__info {
+                    p {
+                        font-size: 16px;
+                        margin-bottom: -6px;
+                    }
+                    span {
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .home {
+        flex-direction: column;
+        &__left {
+            h2,p {
+                max-width: 100%;
+            }
+            &__img {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &__right {
+            flex-direction: row;
+        }
+    }
+
+    // Post Section
+    .post {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        &__card {
+            align-items: center;
+            justify-content: center;
+            &__description {
+                h4 {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    // About section
+    .about {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .home {
+        &__right {
+            width: 100%;
+            flex-direction: column;
+            &__card {
+                h4 {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    // post section
+    .post {
+        gap: 12px;
+        &__card {
+            gap: 12px;
+            &__description {
+                padding-left: 0;
+                padding-right: 0;
+                h4 {
+                    margin-bottom: 12px;
+                    font-size: 20px;
+                    line-height: 32px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .about {
+        &__card {
+            &__description {
+                padding: 24px;
+                h4 {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #home {
+        padding-top: 110px;
+    }
+    .home {
+        gap: 40px;
+        &__left {
+            span {
+                margin-bottom: 12px;
+            }
+            h2 {
+                margin-bottom: 12px;
+                font-size: 32px;
+                line-height: 44px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        &__right {
+            padding: 40px;
+            &__card {
+                h4 {
+                  font-size: 20px;
+                  line-height: 30px;  
+                }
+            }
+        }
+    }
+
+    // post seciton
+    #post {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .post__title {
+        h2 {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+    }
+    .post {
+        gap: 32px;
+        &__card {
+            &__description {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                h4 {
+                    margin-bottom: 12px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    max-width: 100%;
+                }
+                .post__person {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // about section
+    #about {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .about__title {
+        h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
