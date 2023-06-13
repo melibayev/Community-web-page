@@ -386,6 +386,12 @@ header .navbar__container .nav__right .clone__mobile {
     font-size: 16px;
     line-height: 24px;
   }
+  header .navbar__container .nav__right .menus .search input:-ms-input-placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
   header .navbar__container .nav__right .menus .search input::placeholder {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -566,6 +572,14 @@ footer #footer__subscribe .input input::-moz-placeholder {
   color: #232536;
   opacity: 0.4;
 }
+footer #footer__subscribe .input input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #232536;
+  opacity: 0.4;
+}
 footer #footer__subscribe .input input::placeholder {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -647,6 +661,9 @@ footer #footer__subscribe .input input:focus {
   footer #footer__subscribe .input input::-moz-placeholder {
     font-size: 15px;
   }
+  footer #footer__subscribe .input input:-ms-input-placeholder {
+    font-size: 15px;
+  }
   footer #footer__subscribe .input input::placeholder {
     font-size: 15px;
   }
@@ -671,6 +688,9 @@ footer #footer__subscribe .input input:focus {
     padding: 7px;
   }
   footer #footer__subscribe .input input::-moz-placeholder {
+    font-size: 14px;
+  }
+  footer #footer__subscribe .input input:-ms-input-placeholder {
     font-size: 14px;
   }
   footer #footer__subscribe .input input::placeholder {
@@ -932,7 +952,7 @@ footer #footer__main .main__container__top .right .contact a:hover img {
     gap: 30px;
   }
   footer #footer__main .main__container__top .right .menus ul h4,
-  footer #footer__main .main__container__top .right .menus ul .pages {
+footer #footer__main .main__container__top .right .menus ul .pages {
     font-size: 18px;
   }
   footer #footer__main .main__container__top .right .menus ul a {
@@ -1312,7 +1332,8 @@ footer .footer__bottom .footer_bottom .right a:hover {
 }
 #tab .tab__container .tablinks p {
   opacity: 0.6;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1435,6 +1456,14 @@ footer .footer__bottom .footer_bottom .right a:hover {
   display: none;
   min-height: 180px;
 }
+@-webkit-keyframes tabEffect {
+  from {
+    top: -40px;
+  }
+  to {
+    top: 0px;
+  }
+}
 @keyframes tabEffect {
   from {
     top: -40px;
@@ -1474,11 +1503,20 @@ footer .footer__bottom .footer_bottom .right a:hover {
   -webkit-text-fill-color: transparent;
   padding: 0;
   transition: 1s ease-in-out;
-  animation: city 1s ease-in-out;
+  -webkit-animation: city 1s ease-in-out;
+          animation: city 1s ease-in-out;
 }
 @media (max-width: 600px) {
   #tab .tab__container .tabcontent h3 {
     display: none;
+  }
+}
+@-webkit-keyframes city {
+  from {
+    left: -200px;
+  }
+  to {
+    left: -130px;
   }
 }
 @keyframes city {
@@ -1498,7 +1536,8 @@ footer .footer__bottom .footer_bottom .right a:hover {
   margin: 0;
   padding: 0;
   width: 100%;
-  animation: fadeEffect 0.6s ease;
+  -webkit-animation: fadeEffect 0.6s ease;
+          animation: fadeEffect 0.6s ease;
   transition: all 1s ease;
   font-weight: 400;
   font-size: 16px;
@@ -1518,6 +1557,16 @@ footer .footer__bottom .footer_bottom .right a:hover {
 @media (max-width: 550px) {
   #tab .tab__container .tabcontent ul {
     gap: 15px;
+  }
+}
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+    margin-left: 30px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
   }
 }
 @keyframes fadeEffect {
@@ -1566,6 +1615,12 @@ footer .footer__bottom .footer_bottom .right a:hover {
   line-height: 28px;
   color: #232536;
 }
+#apply .apply__container .forms input:-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #232536;
+}
 #apply .apply__container .forms input::placeholder {
   font-weight: 500;
   font-size: 18px;
@@ -1592,6 +1647,13 @@ footer .footer__bottom .footer_bottom .right a:hover {
   outline: 2px solid #444cfc;
 }
 #apply .apply__container .forms textarea::-moz-placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #232536;
+  font-family: "Poppins", sans-serif;
+}
+#apply .apply__container .forms textarea:-ms-input-placeholder {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -1676,7 +1738,8 @@ footer .footer__bottom .footer_bottom .right a:hover {
   stroke-dasharray: 4.5px;
   stroke-dashoffset: 13.5px;
   pointer-events: none;
-  animation: var(--animation, none) 0.2s ease 0.175s;
+  -webkit-animation: var(--animation, none) 0.2s ease 0.175s;
+          animation: var(--animation, none) 0.2s ease 0.175s;
 }
 #apply .apply__container .submit .content .checkbox input:checked {
   --background: var(--active);
@@ -1690,6 +1753,11 @@ footer .footer__bottom .footer_bottom .right a:hover {
 }
 #apply .apply__container .submit .content .checkbox:hover input:not(:checked) {
   --border: var(--border-hover);
+}
+@-webkit-keyframes check {
+  100% {
+    stroke-dashoffset: 4.5px;
+  }
 }
 @keyframes check {
   100% {
@@ -1709,15 +1777,18 @@ footer .footer__bottom .footer_bottom .right a:hover {
 }
 @media (max-width: 1000px) {
   #apply .apply__container .forms input,
-  #apply .apply__container .forms textarea {
+#apply .apply__container .forms textarea {
     font-size: 16px;
     padding: 20px;
   }
   #apply .apply__container .forms input::-moz-placeholder, #apply .apply__container .forms textarea::-moz-placeholder {
     font-size: 16px;
   }
+  #apply .apply__container .forms input:-ms-input-placeholder, #apply .apply__container .forms textarea:-ms-input-placeholder {
+    font-size: 16px;
+  }
   #apply .apply__container .forms input::placeholder,
-  #apply .apply__container .forms textarea::placeholder {
+#apply .apply__container .forms textarea::placeholder {
     font-size: 16px;
   }
 }
@@ -1729,15 +1800,18 @@ footer .footer__bottom .footer_bottom .right a:hover {
     grid-gap: 20px;
   }
   #apply .apply__container .forms input,
-  #apply .apply__container .forms textarea {
+#apply .apply__container .forms textarea {
     padding: 10px 20px;
     font-size: 14px;
   }
   #apply .apply__container .forms input::-moz-placeholder, #apply .apply__container .forms textarea::-moz-placeholder {
     font-size: 14px;
   }
+  #apply .apply__container .forms input:-ms-input-placeholder, #apply .apply__container .forms textarea:-ms-input-placeholder {
+    font-size: 14px;
+  }
   #apply .apply__container .forms input::placeholder,
-  #apply .apply__container .forms textarea::placeholder {
+#apply .apply__container .forms textarea::placeholder {
     font-size: 14px;
   }
   #apply .apply__container .submit .content {
